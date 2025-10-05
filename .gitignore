@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.db
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+.idea/
+*.log
+
+# Node (se aparecer no futuro)
+node_modules/
+
+# Test / build
+dist/
+build/
+.coverage
+htmlcov/
+.cache/
+
+# Arquivos compactados
+*.zip
+*.tar
+*.gz
+
+# (Não ignore os .pkl do ML!)
