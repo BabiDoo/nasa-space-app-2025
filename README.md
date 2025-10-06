@@ -10,19 +10,6 @@ It unifies heterogeneous datasets from NASA missions **Kepler, K2, and TESS**, a
 
 ---
 
-## 📖 Summary
-ExoSeeker automates the classification of exoplanet candidates.  
-We tested multiple models: **Decision Tree, KNN, Naive Bayes, Random Forest, LightGBM, and 1D-CNN**, prioritizing **F1-score** as the main metric.  
-
-Key features:  
-✅ Consolidates data from NASA catalogs  
-✅ Balances and cleans datasets  
-✅ Uses Explainable AI (SHAP + Grad-CAM)  
-✅ Provides web interface for analysis & PDF reports  
-✅ Open-source, reproducible, and globally accessible  
-
----
-
 ## 🎥 Video Presentation
 
 This is the official video presentation of the **ExoSeeker** project for the NASA Space Apps Challenge:  
@@ -39,6 +26,18 @@ This is the official site of the **ExoSeeker** project for the NASA Space Apps C
 
 ---
 
+## 📖 Summary
+ExoSeeker automates the classification of exoplanet candidates.  
+We tested multiple models: **Decision Tree, KNN, Naive Bayes, Random Forest, LightGBM, and 1D-CNN**, prioritizing **F1-score** as the main metric.  
+
+Key features:  
+✅ Consolidates data from NASA catalogs  
+✅ Balances and cleans datasets  
+✅ Uses Explainable AI (SHAP + Grad-CAM)  
+✅ Provides web interface for analysis & PDF reports  
+✅ Open-source, reproducible, and globally accessible  
+
+---
 
 ## 🔬 Project Details
 ExoSeeker addresses one of astronomy’s greatest challenges:  
