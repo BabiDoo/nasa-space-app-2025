@@ -1,39 +1,31 @@
-# backend/app/schemas.py
-from __future__ import annotations
-from typing import Dict, List, Optional, Literal, Union, Any
-from pydantic import BaseModel, ConfigDict
-from uuid import UUID
+from typing import Optional, Dict, Any, List
+from pydantic import BaseModel
 
-# Missoes aceitas (ajuste se quiser permitir outras)
-Mission = Literal["kepler", "k2", "tess"]
+class CatalogItem(BaseModel):
+    id: int
+    mission: str
+    object_id: str
+    alt_designations: Optional[str] = None
+    final_classification: Optional[str] = None
+    final_confidence: Optional[float] = None
+    longitude: Optional[float] = None
+    latitude: Optional[float] = None
+    stellar_temperature: Optional[float] = None
+    stellar_radius: Optional[float] = None
+    planet_radius: Optional[float] = None
+    eq_temperature: Optional[float] = None
+    distance: Optional[float] = None
+    surface_gravity: Optional[float] = None
+    orbital_period: Optional[float] = None
+    insol_flux: Optional[float] = None
+    depth: Optional[float] = None
+    extra: Optional[Dict[str, Any]] = None
 
-# Evita warning por campo "schema" em UploadOut
-class UploadOut(BaseModel):
-    model_config = ConfigDict(protected_namespaces=())
-    dataset_id: str
-    preview: Dict
-    schema: Dict
+    class Config:
+        from_attributes = True  # pydantic v2
 
-# Score por modelo (aceita "non_planet" ou "not_planet")
-class ModelScore(BaseModel):
-    label: Literal["planet", "non_planet", "not_planet", "candidate"]
-    proba: Dict[str, float]  # ex: {"planet": 0.91, "non_planet": 0.09}
-
-# Pedido de predição
-class PredictRequest(BaseModel):
-    dataset_id: str
-
-# Predição por alvo (o que o main.py monta)
-class Prediction(BaseModel):
-    target_id: str
-    mission: Mission
-    # por segurança, aceitamos tanto ModelScore quanto dict já normalizado
-    per_model: Dict[str, Union[ModelScore, Dict[str, Any]]]
-    ensemble: Dict[str, Any]
-
-# Resposta final do endpoint /api/predict
-class PredictOut(BaseModel):
-    run_id: Union[UUID, str]
-    status: Literal["done", "pending", "error"]
-    predictions: List[Prediction]
-    metrics: Optional[Dict[str, Any]] = None
+class CatalogPage(BaseModel):
+    items: List[CatalogItem]
+    page: int
+    page_size: int
+    total: int

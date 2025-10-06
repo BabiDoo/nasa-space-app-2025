@@ -1,24 +1,8 @@
-# Git e IDE
-.git
-.gitignore
-.vscode
-.idea
-
-# Python caches e venv
 __pycache__/
-*.py[cod]
+*.pyc
+*.pyo
+*.pyd
 .venv/
-env/
-
-# Artefatos
-*.log
-*.sqlite
-*.db
-tests/
-docs/
-*.zip
-*.tar
-*.gz
-
-# Infra de fora do contexto
-docker-compose.yml
+venv/
+.git/
+.env
