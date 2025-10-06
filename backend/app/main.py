@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlmodel import SQLModel
-from app.db import engine
-from app.routers import catalog, missions
+from db import engine
+from routers import catalog, missions
+from models import SQLModel
 
 app = FastAPI(title="ExoSeeker API", version="1.0.0")
 

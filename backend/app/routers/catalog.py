@@ -4,9 +4,9 @@ from fastapi import APIRouter, Query, HTTPException, Depends
 from sqlmodel import select, func, col
 from sqlmodel import Session
 
-from app.db import get_session
-from app.models import ExoplanetCatalog
-from app.schemas import CatalogItem, CatalogPage
+from db import get_session
+from models import ExoplanetCatalog
+from schemas import CatalogItem, CatalogPage
 
 router = APIRouter(prefix="/api/catalog", tags=["catalog"])
 
