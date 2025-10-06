@@ -68,7 +68,7 @@ AI was the core of this project:
 
 ## 👩‍🚀 Team Members
 
-| Name | GitHub/Handle | Country | Role |
+| Name | Country | Role |
 |------|---------------|---------|------|
 | **Marina Corrêa Freitas** (Team Owner) | Brazil | Project Lead |
 | **Luiza Arievilo** | Brazil | Research |
