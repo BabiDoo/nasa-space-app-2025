@@ -69,13 +69,14 @@ AI was the core of this project:
 ## 👩‍🚀 Team Members
 
 | Name | Country | Role |
-|------|---------------|---------|------|
-| **Marina Corrêa Freitas** (Team Owner) | Brazil | Project Lead |
-| **Luiza Arievilo** | Brazil | Research |
-| **Márcia Saori Câmara Kishi**  | Brazil | Research & Design |
-| **Jannaina Anita Sangaletti** | Brazil | Machine Learning & Data |
-| **Samantha Nunes** | Brazil | Frontend & UX |
-| **Barbara Lais Dorneles Martins** | Brazil | Backend & Integration |
+|------|---------|------|
+| **Marina Corrêa Freitas** ⭐ (Team Owner) | 🇧🇷 Brazil | 🚀 Project Lead |
+| **Luiza Arievilo** | 🇧🇷 Brazil | 🔬 Research |
+| **Márcia Saori Câmara Kishi** | 🇧🇷 Brazil | 🎨 Research & Design |
+| **Jannaina Anita Sangaletti** | 🇧🇷 Brazil | 🤖 Machine Learning & Data |
+| **Samantha Nunes** | 🇧🇷 Brazil | 💻 Frontend & UX |
+| **Barbara Lais Dorneles Martins** | 🇧🇷 Brazil | 🔧 Backend & Integration |
+
 
 ---
 
