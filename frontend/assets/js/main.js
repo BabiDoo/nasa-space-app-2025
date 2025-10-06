@@ -1,4 +1,5 @@
-const API_URL = "127.0.0.1/api";
+const API_URL = "localhost:8000/api";
+const MISSION_STATS_ENDPOINT = `${API_URL}/mission-stats`;
 
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
@@ -9,6 +10,10 @@ window.addEventListener("scroll", () => {
   }
 });
 document.addEventListener("DOMContentLoaded", carregarQuiz);
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize the dynamic database stats (progress bars)
+  initMissionStats();
+});
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("toggle-search-btn");
   const formWrapper = document.getElementById("search-form");
@@ -43,115 +48,195 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function animarContador(id, valorFinal, duracao) {
+function animarContador(
+  id,
+  valorFinal,
+  duracao = 1200,
+  prefix = "",
+  suffix = ""
+) {
   const elemento = document.getElementById(id);
+  if (!elemento) return;
   let inicio = 0;
   const incremento = valorFinal / (duracao / 16); // Aproximadamente 60 FPS
   const atualizar = () => {
     inicio += incremento;
     if (inicio >= valorFinal) {
-      elemento.textContent = valorFinal;
+      elemento.textContent = `${prefix}${Math.round(valorFinal)}${suffix}`;
     } else {
-      elemento.textContent = Math.floor(inicio);
+      elemento.textContent = `${prefix}${Math.floor(inicio)}${suffix}`;
       requestAnimationFrame(atualizar);
     }
   };
   requestAnimationFrame(atualizar);
 }
 
-// Observa quando o contador entra na tela
-const observer = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        animarContador("confirmedKepler", 100, 2000);
-        observer.unobserve(entry.target); // Para não animar de novo
-      }
-    });
+// ===== Databases: dynamic progress bars =====
+const MISSION_UI = {
+  Kepler: {
+    values: {
+      confirmed: "confirmedKepler",
+      not_planet: "notKepler",
+      candidate: "candidatesKepler",
+    },
+    bars: {
+      confirmed: "confirmedBarKepler",
+      not_planet: "notBarKepler",
+      candidate: "candidateBarKepler",
+    },
   },
-  {
-    threshold: 0.6, // 60% do elemento visível
+  K2: {
+    values: {
+      confirmed: "confirmedK2",
+      not_planet: "notK2",
+      candidate: "candidatesK2",
+    },
+    bars: {
+      confirmed: "confirmedBarK2",
+      not_planet: "notBarK2",
+      candidate: "candidateBarK2",
+    },
+  },
+  TESS: {
+    values: {
+      confirmed: "confirmedTess",
+      not_planet: "notTess",
+      candidate: "candidatesTess",
+    },
+    bars: {
+      confirmed: "confirmedBarTess",
+      not_planet: "notBarTess",
+      candidate: "candidateBarTess",
+    },
+  },
+};
+
+function normalizeMissionKey(name) {
+  if (!name) return name;
+  const n = String(name).trim().toLowerCase();
+  if (n === "k2") return "K2";
+  if (n === "tess") return "TESS";
+  if (n === "kepler") return "Kepler";
+  return name;
+}
+
+function computePercentsFromTotals(totals) {
+  const confirmed = Number(totals.confirmed || 0);
+  const notp = Number(
+    totals.not_planet || totals.not || totals.notconfirmed || 0
+  );
+  const candidate = Number(totals.candidate || totals.candidates || 0);
+  const sum = confirmed + notp + candidate;
+  if (!sum) return { confirmed: 0, not_planet: 0, candidate: 0 };
+  return {
+    confirmed: Math.round((confirmed / sum) * 100),
+    not_planet: Math.round((notp / sum) * 100),
+    candidate: Math.round((candidate / sum) * 100),
+  };
+}
+
+function normalizeMissionStats(raw) {
+  // Expected shapes supported:
+  // 1) { missions: [{ mission: 'Kepler', totals: { confirmed, not_planet, candidate }, percents?: {...} }, ...] }
+  // 2) { kepler: { percents|totals }, k2: {...}, tess: {...} }
+  const out = [];
+  if (!raw) return out;
+  if (Array.isArray(raw.missions)) {
+    for (const m of raw.missions) {
+      const key = normalizeMissionKey(m.mission);
+      const percents =
+        m.percents || computePercentsFromTotals(m.totals || m.counts || {});
+      out.push({ mission: key, percents });
+    }
+    return out;
   }
-);
-
-function getDadosKepler() {
-  let req = fetch("/kepler");
-  let dado = req.then((response) => {
-    return response.json();
-  });
-
-  dado.then((dado) => {
-    document.getElementById(
-      "confirmedKepler"
-    ).innerHTML = `${dado.confirmed} %`;
-    document.getElementById("notKepler").innerHTML = `${dado.notconfirmed} %`;
-    document.getElementById(
-      "candidatesKepler"
-    ).innerHTML = `${dado.candidates} %`;
-
-    document.getElementById(
-      "confirmedKepler"
-    ).style.width = `${dado.confirmed}%`;
-    document.getElementById(
-      "notBarKepler"
-    ).style.width = `${dado.notconfirmed}%`;
-    document.getElementById(
-      "candidateBarKepler"
-    ).style.width = `${dado.candidates}%`;
-
-    observer.observe(document.getElementById("confirmedKepler"));
-    observer.observe(document.getElementById("notKepler"));
-    observer.observe(document.getElementById("candidatesKepler"));
-  });
+  // object map style
+  for (const k of Object.keys(raw)) {
+    const key = normalizeMissionKey(k);
+    const v = raw[k] || {};
+    const percents =
+      v.percents || computePercentsFromTotals(v.totals || v.counts || {});
+    out.push({ mission: key, percents });
+  }
+  return out;
 }
 
-function getDadosK2() {
-  let req = fetch("/K2");
-  let dado = req.then((response) => {
-    return response.json();
-  });
-
-  dado.then((dado) => {
-    document.getElementById("confirmedK2").innerHTML = `${dado.confirmed} %`;
-    document.getElementById("notK2").innerHTML = `${dado.notconfirmed} %`;
-    document.getElementById("candidatesK2").innerHTML = `${dado.candidates} %`;
-
-    document.getElementById("confirmedK2").style.width = `${dado.confirmed}%`;
-    document.getElementById("notBarK2").style.width = `${dado.notconfirmed}%`;
-    document.getElementById(
-      "candidateBarK2"
-    ).style.width = `${dado.candidates}%`;
-
-    observer.observe(document.getElementById("confirmedK2"));
-    observer.observe(document.getElementById("notK2"));
-    observer.observe(document.getElementById("candidatesK2"));
-  });
+async function getMissionStats() {
+  try {
+    const res = await fetch(MISSION_STATS_ENDPOINT);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    return normalizeMissionStats(data);
+  } catch (e) {
+    // Mock fallback so the UI works before the API exists
+    return getMockMissionStats();
+  }
 }
-function getDadosTess() {
-  let req = fetch("/Tess");
-  let dado = req.then((response) => {
-    return response.json();
-  });
 
-  dado.then((dado) => {
-    document.getElementById("confirmedTess").innerHTML = `${dado.confirmed} %`;
-    document.getElementById("notTess").innerHTML = `${dado.notconfirmed} %`;
-    document.getElementById(
-      "candidatesTess"
-    ).innerHTML = `${dado.candidates} %`;
+function getMockMissionStats() {
+  return [
+    {
+      mission: "Kepler",
+      percents: { confirmed: 62, not_planet: 28, candidate: 10 },
+    },
+    {
+      mission: "K2",
+      percents: { confirmed: 48, not_planet: 32, candidate: 20 },
+    },
+    {
+      mission: "TESS",
+      percents: { confirmed: 41, not_planet: 36, candidate: 23 },
+    },
+  ];
+}
 
-    document.getElementById(
-      "confirmedBarTess"
-    ).style.width = `${dado.confirmed}%`;
-    document.getElementById("notBarTess").style.width = `${dado.notconfirmed}%`;
-    document.getElementById(
-      "candidateBarTess"
-    ).style.width = `${dado.candidates}%`;
+async function initMissionStats() {
+  const stats = await getMissionStats();
+  if (!Array.isArray(stats) || stats.length === 0) return;
 
-    observer.observe(document.getElementById("confirmedTess"));
-    observer.observe(document.getElementById("notTess"));
-    observer.observe(document.getElementById("candidatesTess"));
-  });
+  // Animate numbers only once when visible
+  const seen = new Set();
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.id;
+        if (seen.has(id)) return;
+        const targetValue =
+          Number(entry.target.getAttribute("data-target")) || 0;
+        animarContador(id, targetValue, 1000, "", " %");
+        seen.add(id);
+        io.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  for (const m of stats) {
+    const ui = MISSION_UI[m.mission];
+    if (!ui) continue;
+    const p = m.percents || {};
+    // Set text values (with data-target for animation) and bar widths
+    for (const key of ["confirmed", "not_planet", "candidate"]) {
+      const valueId = ui.values[key];
+      const barId = ui.bars[key];
+      const percent = Math.max(0, Math.min(100, Number(p[key] || 0)));
+
+      const valueEl = document.getElementById(valueId);
+      const barEl = document.getElementById(barId);
+      if (valueEl) {
+        valueEl.textContent = "0 %"; // start from 0 for animation
+        valueEl.setAttribute("data-target", String(Math.round(percent)));
+        io.observe(valueEl);
+      }
+      if (barEl) {
+        // Let CSS transition animate the width
+        requestAnimationFrame(() => {
+          barEl.style.width = `${percent}%`;
+        });
+      }
+    }
+  }
 }
 
 async function carregarQuiz() {
@@ -257,11 +342,6 @@ async function getExo(params) {
   const res = await fetch(`${API_URL}/catalog?${queryParams.toString()}`);
   return await res.json();
 }
-
-// async function getMissions() {
-//   const res = await fetch(`${API_URL}/missions`);
-//   return await res.json();
-// }
 
 function renderSearchResults(response) {
   const container = document.getElementById("search-results");
