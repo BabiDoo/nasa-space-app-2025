@@ -148,8 +148,165 @@
           </li>
         </ul>
 
-        <button class="btn">Search for an Exoplanet</button>
-        <div id="search-form" class="hidden"></div>
+        <button
+          id="toggle-search-btn"
+          class="btn"
+          aria-controls="search-form"
+          aria-expanded="false"
+        >
+          Search for an Exoplanet
+        </button>
+        <div id="search-form" class="hidden">
+          <form id="exoplanet-search-form" class="search-form" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="mission">Mission</label>
+                <select id="mission" name="mission">
+                  <option value="">Any</option>
+                  <option value="Kepler">Kepler</option>
+                  <option value="K2">K2</option>
+                  <option value="TESS">TESS</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="longitude">Longitude</label>
+                <input
+                  type="number"
+                  id="longitude"
+                  name="longitude"
+                  step="0.0001"
+                  placeholder="e.g. 120.1234"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="latitude">Latitude</label>
+                <input
+                  type="number"
+                  id="latitude"
+                  name="latitude"
+                  step="0.0001"
+                  placeholder="e.g. -45.5678"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="stellar_temperature">Stellar Temperature (K)</label>
+                <input
+                  type="number"
+                  id="stellar_temperature"
+                  name="stellar_temperature"
+                  step="1"
+                  min="0"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="stellar_radius">Stellar Radius (R☉)</label>
+                <input
+                  type="number"
+                  id="stellar_radius"
+                  name="stellar_radius"
+                  step="0.0001"
+                  min="0"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="planet_radius">Planet Radius (R⊕)</label>
+                <input
+                  type="number"
+                  id="planet_radius"
+                  name="planet_radius"
+                  step="0.0001"
+                  min="0"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="eq_temperature">Equilibrium Temperature (K)</label>
+                <input
+                  type="number"
+                  id="eq_temperature"
+                  name="eq_temperature"
+                  step="1"
+                  min="0"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="distance">Distance (pc)</label>
+                <input
+                  type="number"
+                  id="distance"
+                  name="distance"
+                  step="0.01"
+                  min="0"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="stellar_sur_gravity"
+                  >Stellar Surface Gravity (log g)</label
+                >
+                <input
+                  type="number"
+                  id="stellar_sur_gravity"
+                  name="stellar_sur_gravity"
+                  step="0.01"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="orbital_period">Orbital Period (days)</label>
+                <input
+                  type="number"
+                  id="orbital_period"
+                  name="orbital_period"
+                  step="0.0001"
+                  min="0"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="insol_flux">Insolation Flux (F⊕)</label>
+                <input
+                  type="number"
+                  id="insol_flux"
+                  name="insol_flux"
+                  step="0.0001"
+                  min="0"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="depth">Transit Depth (ppm)</label>
+                <input
+                  type="number"
+                  id="depth"
+                  name="depth"
+                  step="0.01"
+                  min="0"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="final_classification">Final Classification</label>
+                <input
+                  type="text"
+                  id="final_classification"
+                  name="final_classification"
+                  placeholder="e.g. candidate"
+                />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn">Search</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+          </form>
+        </div>
       </section>
 
       <!-- databases -->
@@ -318,6 +475,7 @@
       <!-- results -->
       <section id="results" class="section section-results">
         <h1 class="heading-1">Results</h1>
+        <div id="search-results" class="search-results-container"></div>
         <div class="resultsGrafico">
           <div class="kepler">
             <div></div>

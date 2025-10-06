@@ -32,6 +32,11 @@
   scroll-behavior: smooth;
 }
 
+/* Utilities */
+.hidden {
+  display: none !important;
+}
+
 /* Typography utility classes */
 .heading-1 {
   color: var(--fg);
@@ -282,6 +287,65 @@
         transform: scale(0.98);
       }
     }
+
+    /* Search form */
+    #search-form {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .search-form .form-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .search-form .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 600px) {
+      .search-form .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .search-form .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .search-form label {
+      font-size: 0.95rem;
+    }
+    .search-form input,
+    .search-form select {
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(0, 0, 0, 0.4);
+      color: var(--fg);
+      outline: none;
+    }
+    .search-form input:focus,
+    .search-form select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(0, 191, 255, 0.15);
+    }
+    .search-form .form-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      margin-top: 12px;
+    }
+    .btn.btn-secondary {
+      opacity: 0.85;
+    }
   }
 
   /* Databases */
@@ -371,6 +435,47 @@
   /* Results */
   .section-results {
     margin-block: 3rem;
+
+    .search-results-container {
+      margin: 1rem 0 2rem 0;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius);
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: var(--shadow);
+      padding: 1rem;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+    }
+    .results-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .results-table thead th {
+      text-align: left;
+      padding: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      white-space: nowrap;
+    }
+    .results-table tbody td {
+      padding: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      vertical-align: top;
+    }
+
+    .pager {
+      margin-top: 12px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .pager .pager-info {
+      opacity: 0.85;
+      font-size: 0.95rem;
+    }
 
     .resultsGrafico {
       display: grid;
