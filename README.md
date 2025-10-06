@@ -22,7 +22,7 @@ This is the official video presentation of the **ExoSeeker** project for the NAS
 
 This is the official site of the **ExoSeeker** project for the NASA Space Apps Challenge:  
 
-🔧 [Visit your Site](https://drive.google.com/drive/folders/1BZtTe6Lk5pn00xcosN5Aj87sJmux8WQV?usp=sharing)
+🔧 [Visit your Site](https://exoseeker.pages.dev/)
 
 ---
 
