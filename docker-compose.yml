@@ -1,29 +1,45 @@
 services:
   db:
-    image: postgres:16-alpine
+    image: postgres:16
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: exoseeker
-    ports: ["5432:5432"]
-    volumes:
-      - db_data:/var/lib/postgresql/data
-
-  ml:
-    build: ./ml_service
-    ports: ["8001:8001"]
-    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d exoseeker"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
 
   api:
-    build: ./backend
-    environment:
-      - ML_MODE=http
-      - ML_SERVICE_URL=http://ml:8001
-      - DATABASE_URL=postgresql+psycopg2://postgres:postgres@db:5432/exoseeker
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
     depends_on:
-      - ml
-      - db
-    ports: ["8000:8000"]
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app:/app:ro
 
-volumes:
-  db_data:
+  ingest:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
+    depends_on:
+      db:
+        condition: service_healthy
+      api:
+        condition: service_started
+    volumes:
+      - ./backend/app:/app:ro
+      - ./data:/data:ro
+    working_dir: /app
+    command: python -m scripts.ingest_catalog
