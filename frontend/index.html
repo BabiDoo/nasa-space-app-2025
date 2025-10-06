@@ -1,0 +1,362 @@
+<html class="smooth-scroll reset-all">
+  <head>
+    <link href="./assets/style/style.css" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./assets/img/logo.ico" type="image/svg" />
+
+    <meta charset="utf-8" />
+    <meta name="author" content="LIASTRA" />
+    <meta name="description" content="Nasa space apps" />
+    <meta name="keywords" content="NASA, exoplanets, liastra, AI" />
+    <meta
+      id="viewport"
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>EXOseeker | Home</title>
+  </head>
+  <body class="app">
+    <div class="hero-bg"><img src="./assets/img/background.webp" alt="" /></div>
+    <header class="site-header">
+      <nav class="site-nav">
+        <img class="nav-logo" src="./assets/img/logo.webp" />
+        <button
+          onclick="toggleHamburger()"
+          class="hamburger"
+          id="hamburger-btn"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li>
+            <a
+              class="nav-link"
+              href="#"
+              onclick="scrollToElemen('home'); return false;"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link"
+              href="#"
+              onclick="scrollToElemen('exoplanets'); return false;"
+              >Exoplanets</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link"
+              href="#"
+              onclick="scrollToElemen('databases'); return false;"
+              >Databases</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link"
+              href="#"
+              onclick="scrollToElemen('preprocessing'); return false;"
+              >AI</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link"
+              href="#"
+              onclick="scrollToElemen('results'); return false;"
+              >Results</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link"
+              href="#"
+              onclick="scrollToElemen('quiz'); return false;"
+              >Edu Mode</a
+            >
+          </li>
+        </ul>
+        <div></div>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <!-- Home -->
+      <section id="home" class="section section-home">
+        <h1 class="heading-1">EXOseeker</h1>
+        <p class="text">
+          Our mission is to process thousands of observations from the Kepler
+          and TESS space telescopes, identifying patterns that indicate the
+          presence of potentially habitable planets in distant star systems.
+        </p>
+
+        <button class="btn" onclick="scrollToElemen('exoplanets')">
+          EXPLORE
+        </button>
+      </section>
+
+      <!-- Exoplanets -->
+      <section id="exoplanets" class="section section-exoplanets">
+        <h1 class="heading-1">What is an Exoplanet?</h1>
+        <p class="text">
+          An exoplanet is a planet located outside of our Solar System, orbiting
+          a star other than the Sun. Also called extrasolar planets, these
+          worlds vary greatly in size and type, from gas giants larger than
+          Jupiter to rocky, Earth-like bodies and even planets that wander
+          through space untethered to any star, known as "rogue planets".
+          Scientists detect exoplanets using powerful telescopes and study them
+          to understand planetary formation and the possibility of life beyond
+          Earth.
+        </p>
+
+        <br /><br />
+        <h3 class="heading-3">Why Study Exoplanets?</h3>
+
+        <ul>
+          <li>
+            <p class="text">
+              <b>Search for Life:</b>
+              One of the primary motivations for exoplanet research is the hunt
+              for habitable worlds and signs of extraterrestrial life.
+            </p>
+          </li>
+          <li>
+            <p class="text">
+              <b>Understanding Planetary Systems:</b>
+              Studying exoplanets helps scientists learn how planets form,
+              develop, and how common planetary systems are throughout the
+              universe.
+            </p>
+          </li>
+          <li>
+            <p class="text">
+              <b>Understanding Our Own Planet:</b>
+              By observing the diversity of exoplanets and their environments,
+              scientists gain deeper insights into the conditions that make
+              planets, including Earth, potentially capable of supporting life.
+            </p>
+          </li>
+        </ul>
+
+        <button class="btn">Search for an Exoplanet</button>
+        <div id="search-form" class="hidden"></div>
+      </section>
+
+      <!-- databases -->
+      <section id="databases" class="section section-databases">
+        <h1 class="heading-1">The Databases</h1>
+        <div id="kepler" class="dataset-grid">
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              margin-inline: auto;
+              align-items: center;
+            "
+          >
+            <img
+              style="
+                transform: rotate(90deg);
+                margin-bottom: 2rem;
+                width: 20rem;
+              "
+              src="./assets/img/kepler.webp"
+              alt="Kepler"
+            />
+            <h2 class="heading-2">Kepler</h2>
+            <p class="text">First Mission</p>
+          </div>
+          <p class="text">
+            The Kepler Mission was a NASA space telescope launched in 2009 that
+            searched for planets outside our solar system (exoplanets) by
+            observing the dimming of distant stars. Kepler was the first mission
+            focused on this search and, in its nine years of operation,
+            discovered thousands of exoplanets, revolutionizing our
+            understanding of the frequency of these worlds and the potential for
+            life in the galaxy. After a failure that ended its primary mission,
+            Kepler was adapted for the K2 mission, finally being deactivated in
+            2018 due to lack of fuel.
+          </p>
+          <div class="dados">
+            <div>
+              <h3 class="heading-3">Confirmed planets</h3>
+              <p class="stat-value" id="confirmedKepler"></p>
+              <div class="progress-bar">
+                <span id="confirmedBarKepler"></span>
+              </div>
+            </div>
+            <div>
+              <h3 class="heading-3">Not Planets</h3>
+              <p class="stat-value" id="notKepler"></p>
+              <div class="progress-bar"><span id="notBarKepler"></span></div>
+            </div>
+            <div>
+              <h3 class="heading-3">Candidates</h3>
+              <p class="stat-value" id="candidatesKepler"></p>
+              <div class="progress-bar">
+                <span id="candidateBarKepler"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="K2" class="dataset-grid">
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              margin-inline: auto;
+              align-items: center;
+            "
+          >
+            <img
+              style="
+                transform: rotate(90deg);
+                margin-bottom: 2rem;
+                width: 20rem;
+              "
+              src="./assets/img/k2.webp"
+              alt=""
+            />
+            <h2 class="heading-2">K2</h2>
+            <p class="text">Kepler K2 Mission</p>
+          </div>
+          <p class="text">
+            The K2 Mission was a continuation of NASA's original Kepler space
+            telescope mission, which continued the search for exoplanets and
+            expanded observations into other fields of astrophysics. Developed
+            after Kepler lost stability due to gyroscope problems, K2 used an
+            innovative technique to control the telescope and observe different
+            fields of the sky, identifying hundreds of new exoplanets and
+            candidates, as well as studying other phenomena such as stars and
+            galaxies.
+          </p>
+          <div class="dados">
+            <div>
+              <h3 class="heading-3">Confirmed planets</h3>
+              <p class="stat-value" id="confirmedK2"></p>
+              <div class="progress-bar"><span id="confirmedBarK2"></span></div>
+            </div>
+            <div>
+              <h3 class="heading-3">Not Planets</h3>
+              <p class="stat-value" id="notK2"></p>
+              <div class="progress-bar"><span id="notBarK2"></span></div>
+            </div>
+            <div>
+              <h3 class="heading-3">Candidates</h3>
+              <p class="stat-value" id="candidatesK2"></p>
+              <div class="progress-bar"><span id="candidateBarK2"></span></div>
+            </div>
+          </div>
+        </div>
+        <div id="Tess" class="dataset-grid">
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              margin-inline: auto;
+              align-items: center;
+            "
+          >
+            <img
+              src="./assets/img/tess.webp"
+              alt=""
+              style="margin-bottom: 2rem; width: 10rem"
+            />
+            <h2 class="heading-2">Tess</h2>
+            <p class="text">Transiting Exoplanet Survey Satellite</p>
+          </div>
+          <p class="text">
+            The Transiting Exoplanet Survey Satellite (TESS) mission is a NASA
+            mission, led by MIT, that uses the transit method to find and study
+            exoplanets, or planets outside our solar system. Launched in April
+            2018, TESS monitors the brightest stars nearby for periodic dips in
+            their light, indicating the passage of a planet in front of them.
+            The satellite is designed to discover thousands of planets,
+            including those that may be habitable, and has already found a large
+            number of exoplanet candidates for further study.
+          </p>
+          <div class="dados">
+            <div>
+              <h3 class="heading-3">Confirmed planets</h3>
+              <p class="stat-value" id="confirmedTess"></p>
+              <div class="progress-bar">
+                <span id="confirmedBarTess"></span>
+              </div>
+            </div>
+            <div>
+              <h3 class="heading-3">Not Planets</h3>
+              <p class="stat-value" id="notTess"></p>
+              <div class="progress-bar"><span id="notBarTess"></span></div>
+            </div>
+            <div>
+              <h3 class="heading-3">Candidates</h3>
+              <p class="stat-value" id="candidatesTess"></p>
+              <div class="progress-bar">
+                <span id="candidateBarTess"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- preprocessing -->
+      <section
+        id="preprocessing"
+        class="section section-preprocessing"
+      ></section>
+
+      <!-- results -->
+      <section id="results" class="section section-results">
+        <h1 class="heading-1">Results</h1>
+        <div class="resultsGrafico">
+          <div class="kepler">
+            <div></div>
+            <h3 class="heading-3">Kepler</h3>
+          </div>
+          <div class="kepler">
+            <div></div>
+            <h3 class="heading-3">K2</h3>
+          </div>
+          <div class="kepler">
+            <div></div>
+            <h3 class="heading-3">TESS</h3>
+          </div>
+        </div>
+
+        <div class="keplerdata">
+          <h3 class="heading-3">Final ranking of Kepler candidates by model</h3>
+          <div></div>
+        </div>
+        <div class="K2data">
+          <h3 class="heading-3">Final ranking of K2 candidates by model</h3>
+          <div></div>
+        </div>
+        <div class="Tessdata">
+          <h3 class="heading-3">Final ranking of Tess candidates by model</h3>
+          <div></div>
+        </div>
+      </section>
+
+      <!-- planets -->
+      <section id="planets" class="section section-planets"></section>
+
+      <!-- quiz -->
+      <section id="quiz" class="section section-quiz">
+        <h1 class="heading-1">Take a quiz</h1>
+        <div id="quiz-container"></div>
+      </section>
+    </main>
+  </body>
+  <footer></footer>
+  <script src="./assets/js/main.js"></script>
+</html>

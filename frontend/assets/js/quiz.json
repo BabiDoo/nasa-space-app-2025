@@ -1,0 +1,804 @@
+{
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is an exoplanet?",
+      "answerOptions": [
+        {
+          "text": "A planet located within our Solar System, other than Earth.",
+          "rationale": "Planets within our Solar System are simply called planets, not exoplanets.",
+          "isCorrect": false
+        },
+        {
+          "text": "A planet that orbits a star outside of our Solar System.",
+          "rationale": "The prefix 'exo-' means 'outside,' so an exoplanet is a planet outside our solar family.",
+          "isCorrect": true
+        },
+        {
+          "text": "A small celestial body that orbits a planet, also known as a moon.",
+          "rationale": "A celestial body that orbits a planet is a moon or natural satellite, not an exoplanet.",
+          "isCorrect": false
+        },
+        {
+          "text": "A star that is too small to begin nuclear fusion.",
+          "rationale": "This describes a brown dwarf, which is a substellar object, not a planet.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "Think about the meaning of the prefix 'exo-'."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which was the first exoplanet discovered orbiting a sun-like star?",
+      "answerOptions": [
+        {
+          "text": "Kepler-186f",
+          "rationale": "Kepler-186f was the first Earth-sized planet discovered in the habitable zone of another star, but it was not the first exoplanet found around a sun-like star.",
+          "isCorrect": false
+        },
+        {
+          "text": "Proxima Centauri b",
+          "rationale": "Proxima Centauri b is the closest exoplanet to Earth, but it was discovered much later, in 2016.",
+          "isCorrect": false
+        },
+        {
+          "text": "51 Pegasi b",
+          "rationale": "Discovered in 1995, 51 Pegasi b was the first exoplanet confirmed to be orbiting a main-sequence star similar to our Sun.",
+          "isCorrect": true
+        },
+        {
+          "text": "TRAPPIST-1e",
+          "rationale": "TRAPPIST-1e is part of a famous system of seven rocky planets, but this system was discovered in 2017.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This groundbreaking discovery was made in the mid-1990s and its discoverers won a Nobel Prize."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the 'habitable zone' around a star?",
+      "answerOptions": [
+        {
+          "text": "The region where a planet is close enough to its star to have a molten core.",
+          "rationale": "A molten core is determined by a planet's size, composition, and age, not primarily its distance from the star.",
+          "isCorrect": false
+        },
+        {
+          "text": "The area where the star's gravity is weak enough for a spacecraft to enter orbit.",
+          "rationale": "A spacecraft can orbit a star at many distances; this does not define habitability.",
+          "isCorrect": false
+        },
+        {
+          "text": "The region around a star where conditions might be right for liquid water to exist on a planet's surface.",
+          "rationale": "This zone is defined by the range of orbits where a planet could support liquid water, a key ingredient for life as we know it.",
+          "isCorrect": true
+        },
+        {
+          "text": "The only region where rocky, Earth-like planets can form.",
+          "rationale": "Rocky planets can form both inside and outside the habitable zone.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This concept is nicknamed the 'Goldilocks Zone' for not being too hot or too cold."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of these is NOT a primary method for detecting exoplanets?",
+      "answerOptions": [
+        {
+          "text": "Transit Method",
+          "rationale": "The transit method, which observes the dimming of starlight as a planet passes in front, is the most successful exoplanet detection technique.",
+          "isCorrect": false
+        },
+        {
+          "text": "Direct Imaging",
+          "rationale": "Direct imaging involves taking a direct picture of the exoplanet. It is a valid, though very difficult, detection method.",
+          "isCorrect": false
+        },
+        {
+          "text": "Stellar Triangulation",
+          "rationale": "Stellar triangulation, or parallax, is used to measure the distance to stars, not to find planets orbiting them.",
+          "isCorrect": true
+        },
+        {
+          "text": "Radial Velocity",
+          "rationale": "The radial velocity method detects the 'wobble' of a star caused by the gravitational pull of an orbiting planet.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "Three of these look for the effects a planet has on its star or the light from it. One is used for a different astronomical measurement."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is a 'Hot Jupiter'?",
+      "answerOptions": [
+        {
+          "text": "A Jupiter-sized planet that is still hot from its formation.",
+          "rationale": "While young planets are hot, the term 'Hot Jupiter' refers specifically to its proximity to its star, not its formation heat.",
+          "isCorrect": false
+        },
+        {
+          "text": "A gas giant planet that orbits extremely close to its parent star.",
+          "rationale": "This describes a Hot Jupiter, which has a very short orbital period and a high surface temperature due to its proximity to its star.",
+          "isCorrect": true
+        },
+        {
+          "text": "A rocky planet that is as large as Jupiter.",
+          "rationale": "A rocky planet of this size is not known to exist and would not be called a Hot Jupiter, which is a gas giant.",
+          "isCorrect": false
+        },
+        {
+          "text": "A planet that is actively undergoing nuclear fusion.",
+          "rationale": "An object undergoing nuclear fusion would be classified as a star, not a planet.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "The name refers to both the planet's size and its temperature, which is due to its orbit."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which space telescope has been responsible for discovering the majority of known exoplanets?",
+      "answerOptions": [
+        {
+          "text": "Hubble Space Telescope",
+          "rationale": "Hubble has made crucial observations of exoplanet atmospheres, but it was not designed for large-scale exoplanet hunting.",
+          "isCorrect": false
+        },
+        {
+          "text": "Spitzer Space Telescope",
+          "rationale": "Spitzer, an infrared telescope, made important exoplanet discoveries, including studying the TRAPPIST-1 system, but another mission found more.",
+          "isCorrect": false
+        },
+        {
+          "text": "James Webb Space Telescope",
+          "rationale": "The James Webb Space Telescope is a powerful tool for studying exoplanet atmospheres, but it began its mission after the bulk of discoveries had been made by its predecessor.",
+          "isCorrect": false
+        },
+        {
+          "text": "Kepler Space Telescope",
+          "rationale": "The Kepler mission was specifically designed to find exoplanets using the transit method and has discovered thousands, revolutionizing the field.",
+          "isCorrect": true
+        }
+      ],
+      "hint": "This telescope was launched in 2009 with the primary mission of finding Earth-sized planets."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is a 'Super-Earth'?",
+      "answerOptions": [
+        {
+          "text": "A planet with more advanced life than Earth.",
+          "rationale": "This term relates to physical characteristics, not the presence or complexity of life.",
+          "isCorrect": false
+        },
+        {
+          "text": "A planet with a mass higher than Earth's but substantially below that of the Solar System's ice giants.",
+          "rationale": "Super-Earths are defined by their mass, filling the gap between terrestrial planets like Earth and smaller gas giants like Neptune.",
+          "isCorrect": true
+        },
+        {
+          "text": "A gas giant planet that is larger than Jupiter.",
+          "rationale": "This would be a 'Super-Jupiter,' not a Super-Earth. A Super-Earth is likely rocky or an ocean world.",
+          "isCorrect": false
+        },
+        {
+          "text": "A planet with two suns, similar to Tatooine from Star Wars.",
+          "rationale": "A planet orbiting two stars is called a circumbinary planet. The term Super-Earth refers to mass.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "The name compares the planet's size to our own."
+    },
+    {
+      "questionNumber": 8,
+      "question": "The radial velocity method detects exoplanets by observing:",
+      "answerOptions": [
+        {
+          "text": "The slight dimming of the star's light.",
+          "rationale": "This describes the transit method, not the radial velocity method.",
+          "isCorrect": false
+        },
+        {
+          "text": "The bending of starlight by the planet's gravity.",
+          "rationale": "This effect, known as gravitational microlensing, is another valid detection method but is different from radial velocity.",
+          "isCorrect": false
+        },
+        {
+          "text": "The tiny shifts in the star's spectral lines due to its 'wobble'.",
+          "rationale": "A star's wobble towards and away from us causes a Doppler shift in its light, which is what this method measures.",
+          "isCorrect": true
+        },
+        {
+          "text": "The radio signals emitted by the planet itself.",
+          "rationale": "Detecting radio signals from an exoplanet is a goal of SETI but is not a method used for the initial discovery of the planet's existence.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This method relies on the same principle that makes a siren's pitch change as it moves towards or away from you."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What does TESS stand for in the context of exoplanet missions?",
+      "answerOptions": [
+        {
+          "text": "Telescope for Exoplanetary System Studies",
+          "rationale": "This name is descriptive but not the correct acronym for the mission.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transiting Exoplanet Survey Satellite",
+          "rationale": "This is the correct name for the TESS mission, which is designed to survey the entire sky for transiting exoplanets.",
+          "isCorrect": true
+        },
+        {
+          "text": "Terrestrial Exoplanet Search System",
+          "rationale": "While TESS does find terrestrial planets, this is not what the acronym stands for.",
+          "isCorrect": false
+        },
+        {
+          "text": "Thermal Exoplanet Signature Scanner",
+          "rationale": "TESS primarily looks for the dimming of visible light, not thermal signatures.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "The name of this all-sky survey mission describes its main detection technique."
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: We have taken a direct photograph of an exoplanet's surface showing continents and oceans.",
+      "answerOptions": [
+        {
+          "text": "True",
+          "rationale": "Current technology is not capable of resolving surface features like continents and oceans on any exoplanet.",
+          "isCorrect": false
+        },
+        {
+          "text": "False",
+          "rationale": "Direct imaging can only capture exoplanets as single points of light; we are very far from being able to see surface details.",
+          "isCorrect": true
+        }
+      ],
+      "hint": "Consider the immense distances to other stars and how small a planet is in comparison."
+    },
+    {
+      "questionNumber": 11,
+      "question": "The transit method is biased towards finding which type of planets?",
+      "answerOptions": [
+        {
+          "text": "Small planets in very long-period orbits.",
+          "rationale": "Small planets create a very small dip in light that is hard to detect, and long-period orbits mean transits are very infrequent.",
+          "isCorrect": false
+        },
+        {
+          "text": "Large planets in short-period orbits.",
+          "rationale": "A larger planet blocks more light, and a short-period orbit means transits happen frequently, making them easier to confirm.",
+          "isCorrect": true
+        },
+        {
+          "text": "Planets that do not orbit in the same plane as our line of sight.",
+          "rationale": "For the transit method to work, the planet's orbit must be aligned almost perfectly with our line of sight to the star.",
+          "isCorrect": false
+        },
+        {
+          "text": "Planets orbiting very dim stars like brown dwarfs.",
+          "rationale": "While transits around dim stars can be easier to detect, the method's primary bias is related to the planet's size and orbital period.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "Think about what would make the dip in a star's brightness both large and easy to observe repeatedly."
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is 'transit spectroscopy' used to determine?",
+      "answerOptions": [
+        {
+          "text": "The mass of an exoplanet.",
+          "rationale": "Planet mass is typically determined using the radial velocity method, not spectroscopy during a transit.",
+          "isCorrect": false
+        },
+        {
+          "text": "The composition of an exoplanet's atmosphere.",
+          "rationale": "As starlight passes through the planet's atmosphere during a transit, atmospheric chemicals absorb specific wavelengths, leaving a fingerprint in the light.",
+          "isCorrect": true
+        },
+        {
+          "text": "The distance to the exoplanet's star.",
+          "rationale": "Stellar distance is measured using parallax or other methods, not by analyzing light during a transit.",
+          "isCorrect": false
+        },
+        {
+          "text": "The age of the exoplanet.",
+          "rationale": "The age of a planet is usually inferred from the age of its host star, which is determined through stellar modeling.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This technique analyzes the starlight that passes *through* the very thin layer of gas around the planet."
+    },
+    {
+      "questionNumber": 13,
+      "question": "A 'rogue planet' (or orphan planet) is a celestial body that...",
+      "answerOptions": [
+        {
+          "text": "Orbits its star in the opposite direction to the star's rotation.",
+          "rationale": "This describes a planet with a retrograde orbit, which is unusual but still bound to a star.",
+          "isCorrect": false
+        },
+        {
+          "text": "Is not gravitationally bound to any star and drifts through space.",
+          "rationale": "These are planetary-mass objects that have been ejected from their original system or formed in isolation.",
+          "isCorrect": true
+        },
+        {
+          "text": "Has a highly eccentric, comet-like orbit.",
+          "rationale": "A planet with a very elliptical orbit is still gravitationally bound to its star.",
+          "isCorrect": false
+        },
+        {
+          "text": "Has been captured by a star different from the one it formed around.",
+          "rationale": "While planet capture is theoretically possible, a rogue planet is defined by its lack of a host star.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "Think about what would happen if a planet were kicked out of its solar system by a gravitational interaction."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Why is it easier to detect a transiting planet around an M-dwarf (red dwarf) star compared to a G-type star (like our Sun)?",
+      "answerOptions": [
+        {
+          "text": "M-dwarfs are much larger, making the planet's transit last longer.",
+          "rationale": "M-dwarfs are actually much smaller and dimmer than G-type stars.",
+          "isCorrect": false
+        },
+        {
+          "text": "The habitable zone around an M-dwarf is much farther away, giving a better viewing angle.",
+          "rationale": "The habitable zone around a cool M-dwarf is much closer, not farther away.",
+          "isCorrect": false
+        },
+        {
+          "text": "The M-dwarf is smaller, so a given planet blocks a larger percentage of its light.",
+          "rationale": "The fractional dip in brightness is what's measured, and for a smaller star, the same size planet creates a much deeper, more easily detectable dip.",
+          "isCorrect": true
+        },
+        {
+          "text": "M-dwarfs have fewer starspots that could be confused for a transit signal.",
+          "rationale": "M-dwarfs are known for being very magnetically active and often have many large starspots, which complicates transit detection.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "The transit method measures the *ratio* of the planet's size to the star's size."
+    },
+    {
+      "questionNumber": 15,
+      "question": "The TRAPPIST-1 system is remarkable because it features:",
+      "answerOptions": [
+        {
+          "text": "The first exoplanet discovered with confirmed oceans.",
+          "rationale": "We have not yet confirmed the presence of oceans on any exoplanet.",
+          "isCorrect": false
+        },
+        {
+          "text": "A gas giant planet with a prominent ring system.",
+          "rationale": "The TRAPPIST-1 planets are all small and rocky, not gas giants.",
+          "isCorrect": false
+        },
+        {
+          "text": "Seven Earth-sized rocky planets, with several in the habitable zone.",
+          "rationale": "This system is a prime target for study because of its large number of terrestrial planets orbiting a nearby, ultra-cool dwarf star.",
+          "isCorrect": true
+        },
+        {
+          "text": "The hottest exoplanet ever discovered, with a surface of molten iron.",
+          "rationale": "While ultra-hot exoplanets exist, the TRAPPIST-1 system is notable for its cool star and potentially habitable worlds.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This system holds the record for the most rocky planets found in one place."
+    },
+    {
+      "questionNumber": 16,
+      "question": "What is orbital resonance in the context of an exoplanet system?",
+      "answerOptions": [
+        {
+          "text": "When a planet's rotational period is the same as its orbital period.",
+          "rationale": "This is called synchronous rotation or tidal locking, not orbital resonance.",
+          "isCorrect": false
+        },
+        {
+          "text": "When the composition of two planets in the same system is identical.",
+          "rationale": "Orbital resonance is a dynamic property related to orbits, not composition.",
+          "isCorrect": false
+        },
+        {
+          "text": "When orbiting planets exert a regular, periodic gravitational influence on each other, with orbital periods related by a ratio of small integers.",
+          "rationale": "This describes orbital resonance, where for every orbit one planet makes, another makes a set number of orbits (e.g., a 3:2 or 2:1 ratio).",
+          "isCorrect": true
+        },
+        {
+          "text": "When a planet's orbit perfectly matches the habitable zone of its star.",
+          "rationale": "This describes a potentially habitable planet, but it does not define orbital resonance.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "The planets in the TRAPPIST-1 system display a famous example of this, creating a kind of gravitational rhythm."
+    },
+    {
+      "questionNumber": 17,
+      "question": "A 'phase curve' of an exoplanet measures how the...",
+      "answerOptions": [
+        {
+          "text": "Planet's atmospheric pressure changes over time.",
+          "rationale": "Atmospheric pressure cannot be measured directly from Earth in this way.",
+          "isCorrect": false
+        },
+        {
+          "text": "Planet's orbital speed changes as it moves closer to and farther from its star.",
+          "rationale": "This is related to Kepler's laws and is measured by radial velocity, not a phase curve.",
+          "isCorrect": false
+        },
+        {
+          "text": "Combined light of the star and planet changes as the planet orbits the star.",
+          "rationale": "By observing the system over a full orbit, we can see the brightness change as different amounts of the planet's day and night sides are visible.",
+          "isCorrect": true
+        },
+        {
+          "text": "Star's magnetic field fluctuates due to the planet's influence.",
+          "rationale": "Measuring a star's magnetic field is a different process and is not what a phase curve represents.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This is analogous to observing the phases of the Moon, but for a distant, unresolved point of light."
+    },
+    {
+      "questionNumber": 18,
+      "question": "What does the term 'biosignature' refer to?",
+      "answerOptions": [
+        {
+          "text": "A radio signal deliberately sent by an intelligent civilization.",
+          "rationale": "This is often called a 'technosignature,' a specific subset of the broader category.",
+          "isCorrect": false
+        },
+        {
+          "text": "Any object, substance, or pattern whose origin specifically requires a biological process.",
+          "rationale": "This is the correct definition. It could be a gas in the atmosphere (like oxygen on Earth) or other evidence that points towards life.",
+          "isCorrect": true
+        },
+        {
+          "text": "The signature of liquid water found on a planet's surface.",
+          "rationale": "Liquid water is a 'habitability signature,' meaning it's a necessary condition for life as we know it, but not proof of life itself.",
+          "isCorrect": false
+        },
+        {
+          "text": "A fossil found on another planet.",
+          "rationale": "While a fossil would be a definitive biosignature, the term more broadly refers to any evidence, including chemical traces we can detect from afar.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "Think about what kind of evidence for life we could potentially detect in a planet's atmosphere from light-years away."
+    },
+    {
+      "questionNumber": 19,
+      "question": "Gravitational microlensing is a method that is particularly good at finding:",
+      "answerOptions": [
+        {
+          "text": "Very large planets orbiting close to their star.",
+          "rationale": "Transit and radial velocity methods are more effective for finding this type of planet.",
+          "isCorrect": false
+        },
+        {
+          "text": "Planets that have been ejected from their star system.",
+          "rationale": "Because it relies on the chance alignment of a background star and a foreground mass, microlensing is unique in its ability to detect rogue planets.",
+          "isCorrect": true
+        },
+        {
+          "text": "Planets orbiting in a plane perpendicular to our line of sight.",
+          "rationale": "Planets in this orientation would be undetectable by transit or radial velocity, but microlensing does not depend on the orbital plane.",
+          "isCorrect": false
+        },
+        {
+          "text": "Only planets in our own Solar System.",
+          "rationale": "Microlensing detects planets thousands of light-years away, far beyond our Solar System.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This method relies on a chance alignment between a foreground and background star, and it can work even if the foreground object has no star at all."
+    },
+    {
+      "questionNumber": 20,
+      "question": "A 'Mini-Neptune' is a planet that is:",
+      "answerOptions": [
+        {
+          "text": "A small rocky planet with a very thick hydrogen and helium atmosphere.",
+          "rationale": "This correctly describes a Mini-Neptune, a common type of exoplanet not found in our Solar System, which has a solid core and a substantial gas envelope.",
+          "isCorrect": true
+        },
+        {
+          "text": "A gas giant smaller than Neptune but larger than Earth.",
+          "rationale": "This is a good general description, but the key feature is the thick hydrogen-helium atmosphere over a solid core.",
+          "isCorrect": false
+        },
+        {
+          "text": "A planet composed primarily of ice, similar to Neptune's moons.",
+          "rationale": "This describes an icy body, but Mini-Neptunes are defined by their significant gaseous atmosphere.",
+          "isCorrect": false
+        },
+        {
+          "text": "The rocky core of a gas giant that has had its atmosphere stripped away.",
+          "rationale": "This describes a 'Chthonian planet,' a different theoretical class of exoplanet.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This common type of exoplanet represents a class that is missing from our own Solar System, between the rocky planets and the ice giants."
+    },
+    {
+      "questionNumber": 21,
+      "question": "The 'Rossiter-McLaughlin effect' is observed during a transit and can be used to determine:",
+      "answerOptions": [
+        {
+          "text": "The surface temperature of the exoplanet.",
+          "rationale": "Surface temperature is inferred from the star's light and the planet's orbit, not this effect.",
+          "isCorrect": false
+        },
+        {
+          "text": "The alignment between the planet's orbit and the star's rotation.",
+          "rationale": "This effect causes a specific anomaly in radial velocity data during a transit, revealing whether the planet orbits in the same direction as the star's spin (prograde) or against it (retrograde).",
+          "isCorrect": true
+        },
+        {
+          "text": "The presence of rings or moons around the exoplanet.",
+          "rationale": "Rings or moons would cause a different, more complex signature in the transit light curve itself.",
+          "isCorrect": false
+        },
+        {
+          "text": "The chemical composition of the star.",
+          "rationale": "Stellar composition is determined by general spectroscopy of the star, independent of a planetary transit.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This effect is a spectroscopic anomaly that depends on which part of the rotating stellar disk—the part moving towards us or away from us—the planet blocks first."
+    },
+    {
+      "questionNumber": 22,
+      "question": "What is the 'snow line' (or frost line) in a protoplanetary disk?",
+      "answerOptions": [
+        {
+          "text": "The outermost edge of the disk where material is no longer gravitationally bound to the star.",
+          "rationale": "This describes the edge of the stellar system itself, not a specific temperature boundary within it.",
+          "isCorrect": false
+        },
+        {
+          "text": "The boundary where it is cold enough for volatile compounds like water, ammonia, and methane to condense into solid ice grains.",
+          "rationale": "This line marks a critical transition point in the disk, allowing for the formation of icy bodies and the cores of gas giants.",
+          "isCorrect": true
+        },
+        {
+          "text": "A region in the disk with a very high density of dust and gas, appearing opaque.",
+          "rationale": "While density varies in the disk, the snow line is defined by temperature, not opacity.",
+          "isCorrect": false
+        },
+        {
+          "text": "The line marking the inner edge of the habitable zone.",
+          "rationale": "The snow line is typically much farther out from the star than the habitable zone.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This concept is crucial for understanding why gas giants form in the outer parts of a solar system, while rocky planets form closer in."
+    },
+    {
+      "questionNumber": 23,
+      "question": "The detection of phosphine ($PH_3$) in the atmosphere of Venus was controversial as a potential biosignature. Why would phosphine be considered a sign of life?",
+      "answerOptions": [
+        {
+          "text": "Phosphine is a key component of photosynthesis.",
+          "rationale": "Photosynthesis involves carbon dioxide, water, and light to produce oxygen and glucose; phosphine is not part of this process.",
+          "isCorrect": false
+        },
+        {
+          "text": "On Earth, phosphine is almost exclusively produced by anaerobic (non-oxygen-breathing) life.",
+          "rationale": "Because there are no known abiotic processes that can produce it in the quantities observed, its presence suggests a biological origin, though this is heavily debated.",
+          "isCorrect": true
+        },
+        {
+          "text": "Phosphine naturally forms in the high-pressure, acidic clouds of gas giants.",
+          "rationale": "While it can form in the hydrogen-rich, high-pressure atmospheres of gas giants like Jupiter, the conditions on a rocky planet like Venus make its production very difficult without a non-standard source.",
+          "isCorrect": false
+        },
+        {
+          "text": "Phosphine is a direct byproduct of liquid water reacting with volcanic rock.",
+          "rationale": "This process does not produce phosphine. Volcanic activity releases other gases like sulfur dioxide.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "Consider the chemistry of this molecule and the difficulty of producing it in an oxygen-rich or carbon-dioxide-rich environment without a biological catalyst."
+    },
+    {
+      "questionNumber": 24,
+      "question": "What is meant by 'atmospheric escape' in the context of exoplanets?",
+      "answerOptions": [
+        {
+          "text": "The process where a planet's atmosphere becomes transparent to certain wavelengths of light.",
+          "rationale": "Atmospheric transparency is a property of the atmosphere, not its loss to space.",
+          "isCorrect": false
+        },
+        {
+          "text": "The capture of atmospheric gases from a star's stellar wind.",
+          "rationale": "This describes atmospheric accretion, the opposite of escape.",
+          "isCorrect": false
+        },
+        {
+          "text": "The loss of atmospheric gases to space due to various thermal and non-thermal processes.",
+          "rationale": "This encompasses processes like hydrodynamic escape (Jeans escape) or being stripped away by stellar wind, which can significantly alter a planet over time.",
+          "isCorrect": true
+        },
+        {
+          "text": "The venting of gases from a planet's interior through volcanoes.",
+          "rationale": "This process, called outgassing, adds gas to the atmosphere, it doesn't remove it.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This process is particularly important for planets orbiting very close to their stars or for low-mass planets with weak gravity."
+    },
+    {
+      "questionNumber": 25,
+      "question": "Direct imaging of exoplanets is extremely challenging. What is a 'coronagraph' used for in this process?",
+      "answerOptions": [
+        {
+          "text": "To magnify the light from the exoplanet, making it appear larger.",
+          "rationale": "A coronagraph does not magnify the planet; it deals with the light from the star.",
+          "isCorrect": false
+        },
+        {
+          "text": "To measure the color and temperature of the star with high precision.",
+          "rationale": "This is the job of a spectrometer or photometer, not a coronagraph.",
+          "isCorrect": false
+        },
+        {
+          "text": "To block out the overwhelmingly bright light from the host star.",
+          "rationale": "A star is typically a billion times brighter than its orbiting planet. A coronagraph is an instrument that creates an artificial eclipse to suppress the starlight, allowing the faint planet to be seen.",
+          "isCorrect": true
+        },
+        {
+          "text": "To correct for the blurring effect of Earth's atmosphere.",
+          "rationale": "This is the function of adaptive optics, which often works in conjunction with a coronagraph but is a separate system.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This instrument's name is inspired by how we observe the Sun's corona."
+    },
+    {
+      "questionNumber": 26,
+      "question": "What is the 'red edge,' a potential biosignature that could be detected on an exoplanet?",
+      "answerOptions": [
+        {
+          "text": "A sharp drop in the brightness of a planet at the red end of the visible spectrum, caused by absorption from methane.",
+          "rationale": "Methane absorbs in the infrared, not typically creating a sharp 'edge' feature in the red part of the visible spectrum.",
+          "isCorrect": false
+        },
+        {
+          "text": "A sharp increase in the reflectance of a planet in the near-infrared part of the spectrum, caused by vegetation.",
+          "rationale": "On Earth, chlorophyll-based plants absorb red light but strongly reflect near-infrared light. This sharp transition is the 'red edge' and could indicate widespread plant life.",
+          "isCorrect": true
+        },
+        {
+          "text": "The reddening of starlight as it passes through the dust of interstellar space.",
+          "rationale": "This is interstellar reddening, an effect that changes our view of a star system but is not a feature of the planet itself.",
+          "isCorrect": false
+        },
+        {
+          "text": "A spectral feature indicating the presence of iron oxide (rust) on the planet's surface.",
+          "rationale": "Iron oxide gives a planet a generally reddish color (like Mars), but it does not produce the specific sharp 'edge' feature in the reflection spectrum.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This feature is a distinctive characteristic of plant life on Earth when viewed in specific wavelengths."
+    },
+    {
+      "questionNumber": 27,
+      "question": "Tidally locked planets in the habitable zone of M-dwarf stars would have which feature?",
+      "answerOptions": [
+        {
+          "text": "A very fast rotation, leading to extremely strong winds.",
+          "rationale": "Tidal locking results in synchronous rotation, which is very slow (one rotation per orbit), not fast.",
+          "isCorrect": false
+        },
+        {
+          "text": "A permanent dayside facing the star and a permanent nightside facing away.",
+          "rationale": "This is the definition of tidal locking. It creates extreme temperature differences between the two hemispheres.",
+          "isCorrect": true
+        },
+        {
+          "text": "A thick, global cloud cover of water ice due to the star's low temperature.",
+          "rationale": "While clouds may form, especially at the terminator, a global ice cloud cover is not a guaranteed feature and is not the definition of tidal locking.",
+          "isCorrect": false
+        },
+        {
+          "text": "A stable orbit that never decays, ensuring long-term habitability.",
+          "rationale": "Tidal locking stabilizes rotation, not the orbit itself. Orbits can still decay over very long timescales.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This phenomenon is the same reason we only ever see one face of the Moon from Earth."
+    },
+    {
+      "questionNumber": 28,
+      "question": "The 'evaporation valley' or 'radius valley' in the population of exoplanets is a gap that separates which two types of planets?",
+      "answerOptions": [
+        {
+          "text": "Hot Jupiters and Cold Jupiters.",
+          "rationale": "While these are different classes, there is no distinct gap separating them in the radius distribution.",
+          "isCorrect": false
+        },
+        {
+          "text": "Rocky Super-Earths and gaseous Mini-Neptunes.",
+          "rationale": "This observed gap at around 1.5-2.0 Earth radii is thought to be caused by photoevaporation, where planets of a certain size either retain their thick atmospheres (becoming Mini-Neptunes) or have them stripped away, leaving a bare rocky core (a Super-Earth).",
+          "isCorrect": true
+        },
+        {
+          "text": "Earth-sized planets and Mars-sized planets.",
+          "rationale": "There is a continuum of smaller rocky planet sizes without a notable gap.",
+          "isCorrect": false
+        },
+        {
+          "text": "Gas giants and brown dwarfs.",
+          "rationale": "There is a 'brown dwarf desert' which is a lack of brown dwarfs in close orbits, but the 'radius valley' refers specifically to smaller planets.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This gap in the data suggests that planets of a certain size are unstable over long periods, likely due to their atmospheres being blasted away by their star."
+    },
+    {
+      "questionNumber": 29,
+      "question": "What is a significant challenge for the potential habitability of planets orbiting active M-dwarf stars?",
+      "answerOptions": [
+        {
+          "text": "The star's light is too red for photosynthesis to occur.",
+          "rationale": "While different, photosynthesis could potentially adapt to the red-shifted light of an M-dwarf.",
+          "isCorrect": false
+        },
+        {
+          "text": "The planets are often tidally locked, which prevents the formation of a magnetic field.",
+          "rationale": "Slow rotation might affect a planet's magnetic dynamo, but it does not necessarily prevent it entirely. The star's activity is a more direct threat.",
+          "isCorrect": false
+        },
+        {
+          "text": "The stars can produce powerful stellar flares that can strip a planet's atmosphere and bathe its surface in high-energy radiation.",
+          "rationale": "Because the habitable zone is so close to an M-dwarf, planets within it are particularly vulnerable to the star's violent magnetic activity, posing a major threat to any potential life.",
+          "isCorrect": true
+        },
+        {
+          "text": "The gravitational pull of the small star is too weak to hold onto planets.",
+          "rationale": "M-dwarfs have lower mass but are perfectly capable of holding onto planets in tight, stable orbits, as seen in the TRAPPIST-1 system.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "The 'habitable zone' is very close to these cool stars, putting any planets there in a dangerous location."
+    },
+    {
+      "questionNumber": 30,
+      "question": "The presence of a 'hot Neptune desert' refers to the observed rarity of:",
+      "answerOptions": [
+        {
+          "text": "Neptune-sized planets in very hot, short-period orbits.",
+          "rationale": "This correctly describes the phenomenon. While Hot Jupiters are common, Neptune-sized planets are mysteriously absent from these very close-in orbits, likely because their atmospheres are unstable and evaporate.",
+          "isCorrect": true
+        },
+        {
+          "text": "Neptune-sized planets found in the habitable zones of stars.",
+          "rationale": "There is no observed lack of Neptune-sized planets in habitable zones; the 'desert' is specific to orbits very close to the star.",
+          "isCorrect": false
+        },
+        {
+          "text": "Planets that are colder than Neptune.",
+          "rationale": "Many planets are colder than Neptune; the term refers to a lack of planets in a specific orbital region.",
+          "isCorrect": false
+        },
+        {
+          "text": "Rocky planets that are the same size as Neptune.",
+          "rationale": "A rocky planet the size of Neptune is not thought to exist; Neptune is an ice giant. The term refers to planets of Neptune's mass and radius.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "This observational puzzle is likely explained by atmospheric escape being particularly efficient for planets of this specific size and temperature."
+    }
+  ]
+}
