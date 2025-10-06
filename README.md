@@ -23,6 +23,15 @@ Key features:
 
 ---
 
+## 🎥 Video Presentation
+
+This is the official video presentation of the **ExoSeeker** project for the NASA Space Apps Challenge:  
+
+▶️ [Watch the Video Presentation](https://drive.google.com/drive/folders/1BZtTe6Lk5pn00xcosN5Aj87sJmux8WQV?usp=sharing)
+
+---
+
+
 ## 🔬 Project Details
 ExoSeeker addresses one of astronomy’s greatest challenges:  
 the exponential growth of exoplanet data that still requires time-consuming human validation.  
