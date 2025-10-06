@@ -177,15 +177,27 @@ function getMockMissionStats() {
   return [
     {
       mission: "Kepler",
-      percents: { confirmed: 62, not_planet: 28, candidate: 10 },
+      percents: {
+        confirmed: 40,    // ~ 30–50 % depending on catalogs
+        not_planet: 10,   // ~ 5–15 % false positives / retractions
+        candidate: 50     // remainder are still candidates / unconfirmed
+      }
     },
     {
       mission: "K2",
-      percents: { confirmed: 48, not_planet: 32, candidate: 20 },
+      percents: {
+        confirmed: 50,    // using earlier campaign ~ 52.8 % validated
+        not_planet: 15,   // ~ 15 % in that sample were false positives
+        candidate: 35     // rest undetermined
+      }
     },
     {
       mission: "TESS",
-      percents: { confirmed: 41, not_planet: 36, candidate: 23 },
+      percents: {
+        confirmed: 8,     // ~ 8 % confirmed out of total candidates (638/7,655 ≈ 8.3 %) :contentReference[oaicite:5]{index=5}
+        not_planet: 27,   // many false positives: in one TESS TOI catalog, ~ 27 % FPs in prime mission :contentReference[oaicite:6]{index=6}
+        candidate: 65     // rest are still unresolved / candidates
+      }
     },
   ];
 }
