@@ -70,13 +70,12 @@ AI was the core of this project:
 
 | Name | GitHub/Handle | Country | Role |
 |------|---------------|---------|------|
-| **Marina Corrêa Freitas** (Team Owner) | [@marinafreitas](https://github.com/marinafreitas) | Brazil | Project Lead |
-| **Luiza Arievilo** | [@luizaarievilo](https://github.com/luizaarievilo) | Brazil | Machine Learning & Data |
-| **Jannaina Anita Sangaletti** | [@jannitas](https://github.com/jannitas) | Brazil | Frontend & UX |
-| **Samantha Nunes** | [@samanthans](https://github.com/samanthans) | Brazil | AI/Explainability |
-| **Márcia Saori Câmara Kishi** | [@marciakishi](https://github.com/marciakishi) | Brazil | Backend & Integration |
-| **Barbara Lais Dorneles Martins** | [@barbaradorneles](https://github.com/barbaradorneles) | Brazil | Research & Validation |
-
+| **Marina Corrêa Freitas** (Team Owner) | Brazil | Project Lead |
+| **Luiza Arievilo** | Brazil | Research |
+| **Márcia Saori Câmara Kishi**  | Brazil | Research & Design |
+| **Jannaina Anita Sangaletti** | Brazil | Machine Learning & Data |
+| **Samantha Nunes** | Brazil | Frontend & UX |
+| **Barbara Lais Dorneles Martins** | Brazil | Backend & Integration |
 
 ---
 
